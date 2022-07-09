@@ -15,5 +15,14 @@
     </tr>
    {% endfor %}
   </table>
+
+  <form action="insert/" method="post">
+    {% csrf_token %}
+    <label for="fname">名稱:</label>
+    <input type="text" id="fname" name="name"><br><br>
+    <label for="lname">費用:</label>
+    <input type="text" id="lname" name="price"><br><br>
+    <input type="submit" value="Submit">
+  </form>
  </body>
 </html>
