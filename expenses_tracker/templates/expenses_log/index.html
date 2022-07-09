@@ -11,7 +11,8 @@
     <tr>
      <td>{{ expense.name }} </td>
      <td>{{ expense.price }} </td>
-    
+     <td><a href="delete/{{ expense.id }}">刪除</a></td>
+     
     </tr>
    {% endfor %}
   </table>

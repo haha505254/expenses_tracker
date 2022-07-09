@@ -20,5 +20,12 @@ def insert(request):  #新增資料
             unit.save()  #寫入資料庫
     except Exception as e:
         return HttpResponse("請填入正確數字")
-    expenses = Expense.objects.all().order_by('-id')  #讀取資料表, 依 id 遞減排序
+    # expenses = Expense.objects.all().order_by('-id')  #讀取資料表, 依 id 遞減排序
+    return redirect('listall')
+
+
+def delete(request,id=None):  #刪除資料
+    unit = Expense.objects.get(id=id)
+    unit.delete()
+    # expenses = Expense.objects.all().order_by('-id')
     return redirect('listall')
