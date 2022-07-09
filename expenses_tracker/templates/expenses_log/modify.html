@@ -1,0 +1,11 @@
+<form action="" method="post">
+    {% csrf_token %}
+    <input id="prodId" name="id" type="hidden" value={{ unit.id }}>
+    <label for="fname">名稱:</label>
+    <input type="text" id="fname" name="name" value={{ unit.name }}><br><br>
+    <label for="lname">費用:</label>
+    <input type="text" id="lname" name="price" value={{ unit.price }}><br><br>
+    <input type="submit" value="Submit">
+  </form>
+ </body>
+</html>

@@ -5,4 +5,5 @@ urlpatterns = [
     path('', views.listall,name='listall'),
     path('insert/', views.insert,name='insert'),
     path('delete/<int:id>', views.delete,name='delete'),
+    path('modify/<int:id>', views.modify,name='modify'),
 ]
